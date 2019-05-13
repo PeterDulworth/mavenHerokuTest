@@ -63,21 +63,21 @@
             </plugin>
 
             <!--deploy to heroku-->
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>2.0.8</version>
-                <configuration>
-                    <jdkVersion>1.8</jdkVersion>
-                    <!-- Use your own application name -->
-                    <appName>mvn-test12</appName>
-                    <processTypes>
-                        <!-- Tell Heroku how to launch your application -->
-                        <!-- You might have to remove the ./ in front   -->
-                        <web>java -jar ./target/mvn-test12-1.0-jar-with-dependencies.jar</web>
-                    </processTypes>
-                </configuration>
-            </plugin>
+            <!--<plugin>-->
+                <!--<groupId>com.heroku.sdk</groupId>-->
+                <!--<artifactId>heroku-maven-plugin</artifactId>-->
+                <!--<version>2.0.8</version>-->
+                <!--<configuration>-->
+                    <!--<jdkVersion>1.8</jdkVersion>-->
+                    <!--&lt;!&ndash; Use your own application name &ndash;&gt;-->
+                    <!--<appName>mvn-test12</appName>-->
+                    <!--<processTypes>-->
+                        <!--&lt;!&ndash; Tell Heroku how to launch your application &ndash;&gt;-->
+                        <!--&lt;!&ndash; You might have to remove the ./ in front   &ndash;&gt;-->
+                        <!--<web>java -jar ./target/mvn-test12-1.0-jar-with-dependencies.jar</web>-->
+                    <!--</processTypes>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
 
         </plugins>
     </build>
