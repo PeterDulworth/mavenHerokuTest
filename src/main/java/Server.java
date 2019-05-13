@@ -10,7 +10,13 @@ public class Server {
         // When using Maven, the "/public" folder is assumed to be in "/main/resources"
         staticFileLocation("/public");
 
+        // configure the port for heroku
         port(getHerokuAssignedPort());
+
+        get("/", (request, response) -> {
+            response.redirect("index.html");
+            return null;
+        });
 
         get("/hello", (req, res) -> "Hello World");
 
@@ -39,8 +45,6 @@ public class Server {
             response.redirect("/news/world");
             return null;
         });
-
-        get("/", (request, response) -> "root");
 
         get("/reqStats", (request, res) -> {
             System.out.println("attributes: " + request.attributes());             // the attributes list
@@ -107,7 +111,10 @@ public class Server {
 //        });
     }
 
-    static int getHerokuAssignedPort() {
+    /**
+     * Configure the correct port for heroku.
+     */
+    private static int getHerokuAssignedPort() {
         ProcessBuilder processBuilder = new ProcessBuilder();
         if (processBuilder.environment().get("PORT") != null) {
             return Integer.parseInt(processBuilder.environment().get("PORT"));
