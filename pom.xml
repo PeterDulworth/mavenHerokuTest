@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.peterdulworth.mvnTest</groupId>
-    <artifactId>mvn-test11</artifactId>
+    <artifactId>mvn-test12</artifactId>
     <version>1.0</version>
 
     <dependencies>
@@ -68,11 +68,11 @@
                 <configuration>
                     <jdkVersion>1.8</jdkVersion>
                     <!-- Use your own application name -->
-                    <appName>mvn-test11</appName>
+                    <appName>mvn-test12</appName>
                     <processTypes>
                         <!-- Tell Heroku how to launch your application -->
                         <!-- You might have to remove the ./ in front   -->
-                        <web>java -jar ./target/mvn-test11-1.0-jar-with-dependencies.jar</web>
+                        <web>java -jar ./target/mvn-test12-1.0-jar-with-dependencies.jar</web>
                     </processTypes>
                 </configuration>
             </plugin>
