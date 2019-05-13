@@ -1,0 +1,1 @@
+web: java -jar ./target/mvn-test12-1.0-jar-with-dependencies.jar
